@@ -208,8 +208,8 @@ function show(){
 }
 window.addEventListener("hashchange",show);show();
 
-var dc=document.getElementById("dcCopy"),dct;
-if(dc)dc.onclick=function(){copy(dc.getAttribute("data-link"));dc.textContent="Скопировано";clearTimeout(dct);dct=setTimeout(function(){dc.textContent="Скопировать ссылку"},1600)};
+var dc=document.getElementById("dcCopy");
+if(dc)dc.onclick=function(){copy(dc.getAttribute("data-link"))};
 </script>
 </body>
 </html>
