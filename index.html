@@ -170,7 +170,7 @@ SERVERS.forEach(function(s){
   c.querySelector(".sh p").textContent=s.mode;
   var code=c.querySelector("code");code.textContent=s.ip;
   var cp=c.querySelector(".cp"),ct;
-  code.onclick=cp.onclick=function(){copy(s.ip);cp.textContent="Скопировано";clearTimeout(ct);ct=setTimeout(function(){cp.textContent="Копировать"},1600)};
+  code.onclick=cp.onclick=function(){copy(s.ip)};
   list.appendChild(c);
 });
 // Бинды: замени key на свою клавишу
