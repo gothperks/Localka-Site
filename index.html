@@ -114,7 +114,7 @@ header li a.on{background:var(--hv)}
     <div class="box dcl">
       <h3>Discord</h3>
       <p>Новости сервера, ивенты и общение.</p>
-      <a class="btn" href="https://discord.com/channels/1269389532680290526" target="_blank" rel="noopener">Скопировать ссылку</a>
+      <button class="btn" type="button" id="dcCopy" data-link="https://discord.com/channels/1269389532680290526">Скопировать ссылку</button>
     </div>
     <div class="box" style="padding:0"><iframe src="https://discord.com/widget?id=1269389532680290526&theme=dark" title="Discord" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
   </div>
@@ -207,6 +207,9 @@ function show(){
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",show);show();
+
+var dc=document.getElementById("dcCopy"),dct;
+if(dc)dc.onclick=function(){copy(dc.getAttribute("data-link"));dc.textContent="Скопировано";clearTimeout(dct);dct=setTimeout(function(){dc.textContent="Скопировать ссылку"},1600)};
 </script>
 </body>
 </html>
